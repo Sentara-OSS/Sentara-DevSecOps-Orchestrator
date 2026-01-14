@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentara-devsecops-orchastrator"
+version = "1.0.0"
+description = "Automated DevSecOps Governance Engine"
+authors = [{name = "Gopal Reddy, Pagidimari", email = "greddy2193@gmail.com"}]
+dependencies = [
+    "requests>=2.20.0",
+    "semgrep",
+    "detect-secrets"
+]
+requires-python = ">=3.12"
+
+[project.scripts]
+# Entry points: These allow you to run the tool from any terminal
+sentara-build = "sentara.build_orchastrator:main"
+sentara-deploy = "sentara.deploy_orchastrator:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

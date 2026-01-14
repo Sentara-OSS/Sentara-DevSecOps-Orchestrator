@@ -1,0 +1,14 @@
+# Python build/dist artifacts
+*.egg-info/
+build/
+dist/
+__pycache__/
+*.py[cod]
+
+# Environments
+.venv/
+env/
+venv/
+
+# Docker logs
+*.log
